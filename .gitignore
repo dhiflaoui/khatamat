@@ -1,0 +1,4 @@
+node_modules/
+.DS_Store
+# Engine types for local typechecking (not shipped)
+mods/khatamat/types/engine/

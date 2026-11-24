@@ -1,0 +1,46 @@
+{
+  "name": "khatamat",
+  "version": "0.8.0",
+  "description": "khatamat (ختمات): the next verse of the Quran in a popup at the interval you choose, in order from Al-Fatiha to An-Nas and around again, with the Saheeh International English translation. /quran opens a pane to browse verses.",
+  "author": {
+    "name": "alKacem",
+    "url": "https://github.com/dhiflaoui"
+  },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "every": {
+      "type": "number",
+      "title": "Show a verse every",
+      "description": "How many minutes or hours between two popups (see the unit option).",
+      "default": 30,
+      "min": 1
+    },
+    "unit": {
+      "type": "string",
+      "title": "Unit",
+      "description": "Whether the interval above counts minutes or hours.",
+      "default": "minutes",
+      "options": ["minutes", "hours"]
+    },
+    "closeAfterSeconds": {
+      "type": "number",
+      "title": "Popup stays for (seconds)",
+      "description": "How long each verse popup stays on screen before it closes by itself.",
+      "default": 60,
+      "min": 5
+    },
+    "wordsPerLine": {
+      "type": "number",
+      "title": "Words per line",
+      "description": "Most words on one line of the verse in the pane. Long verses are split into even lines.",
+      "default": 9,
+      "min": 3
+    },
+    "translation": {
+      "type": "boolean",
+      "title": "English translation",
+      "description": "Show the English translation (Saheeh International, Tarteel QUL) under the verse in the pane.",
+      "default": true
+    }
+  }
+}

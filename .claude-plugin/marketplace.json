@@ -1,0 +1,17 @@
+{
+  "name": "khatamat",
+  "description": "khatamat (ختمات): the Quran verse by verse in Claude Code, Arabic with an English translation.",
+  "owner": {
+    "name": "alKacem"
+  },
+  "plugins": [
+    {
+      "name": "khatamat",
+      "description": "The next verse of the Quran in a popup at the interval you choose, in order and around again, with the Saheeh International English translation. /quran opens a pane with Previous and Next.",
+      "version": "0.8.0",
+      "source": "./mods/khatamat",
+      "category": "Reminders",
+      "tags": ["pane", "toast", "command"]
+    }
+  ]
+}
