@@ -7,7 +7,7 @@ A verse of the Quran in Claude Code every few minutes, in order, from Al-Fatiha 
 ## Install
 
 ```sh
-claude plugin marketplace add alkacem/khatamat
+claude plugin marketplace add dhiflaoui/khatamat
 ```
 
 ```sh
@@ -19,7 +19,7 @@ Restart Claude Code after installing. You need a Claude Code version that suppor
 To try it without installing:
 
 ```sh
-git clone https://github.com/alkacem/khatamat && cd khatamat
+git clone https://github.com/dhiflaoui/khatamat && cd khatamat
 claude --plugin-dir mods/khatamat
 ```
 
