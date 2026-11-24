@@ -30,8 +30,7 @@ claude --plugin-dir mods/khatamat
 - **Arabic text.** The verse is split into balanced, centred lines with space between them, so long verses stay readable. The header shows the surah and verse number in Arabic, on the right: `سورة البقرة · الآية 255`.
 - **English translation.** The Saheeh International translation appears under the Arabic, in dimmed text. You can turn it off.
 - **It remembers where you are.** The position is saved across sessions, so you carry on from the last verse you saw. After 114:6 it starts again at 1:1.
-- **Toast fallback.** When the pane can't be shown (for example, in a narrow terminal), the verse appears as a toast instead.
-- **On/Off switch.** Turn khatamat off in `/mods` to stop the popups in every chat.
+- **Pane or toast.** The timed popup shows as a pane only when the chat area is wide enough; otherwise you get a toast (see [Notes](#notes)).
 - **Local only.** All 6236 verses ship with the plugin, so nothing is fetched from the network.
 
 ## Settings
@@ -64,6 +63,10 @@ The files in `mods/khatamat/data/` were converted once from the QUL downloads:
 
 ## Notes
 
+- **Pane or toast:** Claude Code only draws a pane that a plugin opens on its own when the chat area is wide enough: at least 144 columns, or 110 once you've opened `/quran` by hand.
+  - In a narrower window the timed popup isn't drawn. When that happens, the code (`popupNext` in `mods/khatamat/hooks/register.tsx`) closes the pane and shows the verse as a toast instead.
+  - `/quran` always opens the pane, because you asked for it.
+  - To get the pane for timed popups, widen the window or the chat area.
 - **Font:** Claude Code chooses the font for Arabic text; a mod can't. If a character shows as a box, your system's font is missing that glyph.
 - **Mod files:** the mod lives in `mods/khatamat/`:
   - `hooks/register.tsx`: the logic;
